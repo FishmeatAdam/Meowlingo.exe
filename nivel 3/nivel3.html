@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Duolingo.exe</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .feedback-img {
+      max-width: 150px;
+      margin-top: 10px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo">Duolingo2.0</h1>
+      <nav>
+        <ul>
+          <a href="http://127.0.0.1:5500/duolingo.ecse/Meowlingo.exe/index.html" class="boton">Interactúa con Meowlingo</a>
+
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-text">
+        <h2>Pongamos a prueba tus habilidades auditivas</h2>
+      </div>
+      <img src="images/shock.gif" alt="Learning graphic" />
+      <h1>Ahora, escucha con atención y responde.</h1>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="container">
+      <div class="feature">
+        <h3>Escucha con atención y responde.</h3>
+        <p>Una vez respondas, apreta el botón. Evita el uso de mayusculas,Puedes usar comas.</p>
+
+        <audio id="audio1" src="audios/1.wav"></audio>
+        <button onclick="document.getElementById('audio1').play()">Audio 1 </button>
+        <input type="text" id="input1" placeholder="Escribe lo que escuchaste..." />
+        <button onclick="verificarRespuesta(1,'cats are a nice company when you are alone, they are cuddly, soft and more, dogs also are, but dogs usually are more clingy')">Subir respuesta</button>
+        <img id="feedback1" class="feedback-img" />
+      </div>
+
+      <div class="feature">
+        <h3>Escucha con atención y responde.</h3>
+        <p>Una vez respondas, apreta el botón. Evita el uso de mayusculas,Puedes usar comas.</p>
+
+        <audio id="audio2" src="audios/2.wav"></audio>
+        <button onclick="document.getElementById('audio2').play()">Audio 2</button>
+
+        <input type="text" id="input2" placeholder="Escribe lo que escuchaste..." />
+        <button onclick="verificarRespuesta(2, 'i like tomatos and ice cream, sadly you can mix them and make a new food out of it, it would be gross to the taste')">Subir respuesta</button>
+        <img id="feedback2" class="feedback-img" />
+      </div>
+
+  
+      <div class="feature">
+        <h3>Escucha con atención y responde.</h3>
+    <p>Una vez respondas, apreta el botón. Evita el uso de mayusculas,Puedes usar comas.</p>
+
+        <audio id="audio3" src="audios/3.wav"></audio>
+        <button onclick="document.getElementById('audio3').play()">Audio 3</button>
+
+        <input type="text" id="input3" placeholder="Escribe lo que escuchaste..." />
+        <button onclick="verificarRespuesta(3, 'cherry pie is very delicious when you are hungry, any food can be delicious when you are hungry, but not any drink is when you are thirsty')">Subir respuesta</button>
+        <img id="feedback3" class="feedback-img" />
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function verificarRespuesta(num, respuestaCorrecta) {
+      const input = document.getElementById(`input${num}`).value.trim().toLowerCase();
+      const feedbackImg = document.getElementById(`feedback${num}`);
+      
+      if (input === respuestaCorrecta.toLowerCase()) {
+        feedbackImg.src = "images/shock.gif"; 
+      } else {
+        feedbackImg.src = "images/triste.png"; 
+      }
+
+      feedbackImg.style.display = "block";
+    }
+
+  </script>
+
+  <center>
+  <button style="padding: 15px 30px; font-size: 18px;"> <a href="http://127.0.0.1:5500/duolingo.ecse/nivel%202/nivel2..html"> Regresar </a></button>
+</center>
+  <h1></h1>
+  <h2>-</h2>
+ 
+
+  
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Meowl</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive;
+      text-align: center;
+      background: #e6ffe6;
+      padding: 30px;
+    }
+    #meowl {
+      width: 250px;
+      transition: all 0.3s ease;
+    }
+    button {
+      font-size: 18px;
+      padding: 10px 20px;
+      margin: 10px;
+      cursor: pointer;
+    }
+    .status {
+      font-size: 20px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Meowl.</h1>
+  <img id="meowl" src="imagenes/neutro.png" alt="Meowl">
+
+  <div class="status">
+    <p>Hambre: <span id="hunger">50</span></p>
+    <p>Felicidad: <span id="happiness">50</span></p>
+  </div>
+
+  <div>
+    <button onclick="feed()">🍗 Alimentar</button>
+    <button onclick="play()">🎾 Jugar</button>
+  </div>
+
+  <script>
+    let hunger = 50;
+    let happiness = 50;
+    const hungerEl = document.getElementById("hunger");
+    const happinessEl = document.getElementById("happiness");
+    const meowlImg = document.getElementById("meowl");
+
+    function updateStatus() {
+      hungerEl.textContent = hunger;
+      happinessEl.textContent = happiness;
+      updateMeowlMood();
+    }
+
+    function updateMeowlMood() {
+      if (happiness < 30) {
+      } else if (hunger > 70) {
+        meowlImg.src = "imagenes/aburrido.png"; 
+      } else if (happiness > 80 && hunger < 30) {
+        meowlImg.src = "imagenes/enojao.png"; 
+      } else {
+        meowlImg.src = "imagenes/neutro.png"; 
+      }
+    }
+
+    function feed() {
+      hunger = Math.max(0, hunger - 15);
+      happiness = Math.min(100, happiness + 5);
+      updateStatus();
+    }
+
+    function play() {
+      happiness = Math.min(100, happiness + 10);
+      hunger = Math.min(100, hunger + 5);
+      updateStatus();
+    }
+
+    setInterval(() => {
+      hunger = Math.min(100, hunger + 1);
+      happiness = Math.max(0, happiness - 1);
+      updateStatus();
+    }, 3000);
+
+    updateStatus();
+  </script>
+
+  <center><a href="http://127.0.0.1:5500/duolingo.ecse/index.html#" class="boton">Regresar</a> </center>
+</body>
+</html>

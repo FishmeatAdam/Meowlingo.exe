@@ -1,0 +1,140 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #f5f0e6;
+  color: #4b3f2f;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Header */
+header {
+  background-color: #a47551;
+  padding: 20px 0;
+}
+
+.logo {
+  font-size: 1.8rem;
+  color: white;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero {
+  background-color: #ffb347;
+  padding: 60px 0;
+}
+
+.hero .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.hero button {
+  padding: 12px 24px;
+  background-color: #d87b5e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.hero img {
+  max-width: 300px;
+  border-radius: 10px;
+}
+
+.features {
+  padding: 60px 0;
+  background-color: #f5f0e6;
+}
+
+.features .container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.feature {
+  background-color: #fff8f1;
+  border: 1px solid #e0d6c5;
+  padding: 20px;
+  flex: 1;
+  min-width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.feature button {
+  margin-top: 10px;
+  background-color: #d87b5e;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.feature input {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.boton {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}

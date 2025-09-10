@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Duolingo.exe</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .feedback-img {
+      max-width: 150px;
+      margin-top: 10px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo">Duolingo2.0</h1>
+      <nav>
+        <ul>
+          <a href="http://127.0.0.1:5500/duolingo.ecse/Meowlingo.exe/index.html" class="boton">Interactúa con Meowlingo</a>
+
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-text">
+        <h2>Pongamos a prueba tus habilidades auditivas</h2>
+      </div>
+      <img src="images/shock.gif" alt="Learning graphic" />
+      <h1>Ahora, escucha con atención y responde.</h1>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="container">
+      <div class="feature">
+        <h3>Escucha con atención y responde.</h3>
+        <p>Una vez respondas, apreta el botón. Evita el uso de mayusculas.</p>
+
+        <audio id="audio1" src="audios/WhatsApp Audio 2025-09-02 at 16.45.18.ogg"></audio>
+        <button onclick="document.getElementById('audio1').play()">Audio </button>
+
+        <input type="text" id="input1" placeholder="Escribe lo que escuchaste..." />
+        <button onclick="verificarRespuesta(1, 'hello my name is pablo')">Subir respuesta</button>
+        <img id="feedback1" class="feedback-img" />
+      </div>
+
+      <div class="feature">
+        <h3>Escucha con atención y responde.</h3>
+        <p>Una vez respondas, apreta el botón. Evita el uso de mayusculas.</p>
+
+        <audio id="audio2" src="audios/WhatsApp Audio 2025-09-02 at 16.45.39.ogg"></audio>
+        <button onclick="document.getElementById('audio2').play()">Audio 2</button>
+
+        <input type="text" id="input2" placeholder="Escribe lo que escuchaste..." />
+        <button onclick="verificarRespuesta(2, 'i work as a cashier at a shop')">Subir respuesta</button>
+        <img id="feedback2" class="feedback-img" />
+      </div>
+
+  
+      <div class="feature">
+        <h3>Escucha con atención y responde.</h3>
+        <p>Una vez respondas, apreta el botón. Evita el uso de mayusculas.</p>
+
+        <audio id="audio3" src="audios/WhatsApp Audio 2025-09-02 at 16.45.48.ogg"></audio>
+        <button onclick="document.getElementById('audio3').play()">Audio 3</button>
+
+        <input type="text" id="input3" placeholder="Escribe lo que escuchaste..." />
+        <button onclick="verificarRespuesta(3, 'i have two dogs in my house')">Subir respuesta</button>
+        <img id="feedback3" class="feedback-img" />
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function verificarRespuesta(num, respuestaCorrecta) {
+      const input = document.getElementById(`input${num}`).value.trim().toLowerCase();
+      const feedbackImg = document.getElementById(`feedback${num}`);
+      
+      if (input === respuestaCorrecta.toLowerCase()) {
+        feedbackImg.src = "images/shock.gif"; 
+      } else {
+        feedbackImg.src = "images/triste.png"; 
+      }
+
+      feedbackImg.style.display = "block";
+    }
+
+
+   <div class="feature">
+        <h3>Escucha con atención y responde.</h3>
+        <p>Una vez respondas, apreta el botón. Evita el uso de mayusculas, Usa comas donde se deban usar.</p>
+
+        <audio id="audio2" src="audios/audio.wav"></audio>
+        <button onclick="document.getElementById('audio2').play()">Audio 2</button>
+
+        <input type="text" id="input2" placeholder="Escribe lo que escuchaste..." />
+        <button onclick="verificarRespuesta(2, 'i work as a cashier at a shop')">Subir respuesta</button>
+        <img id="feedback2" class="feedback-img" />
+      </div>    
+  </script>
+
+  <center>
+  <button style="padding: 15px 30px; font-size: 18px;"> <a href="http://127.0.0.1:5500/duolingo.ecse/nivel%202/nivel2..html"> Nivel 2 </a></button>
+</center>
+  <h1></h1>
+
+
+  
+</body>
+</html>
